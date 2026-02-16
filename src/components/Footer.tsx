@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const quickLinks = [
   { label: "Home", href: "#home" },
@@ -23,13 +24,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <div className="flex items-center gap-2 mb-5">
-              <div className="w-9 h-9 bg-accent rounded-xl flex items-center justify-center">
-                <span className="text-white font-bold text-sm">ie</span>
-              </div>
-              <span className="text-xl font-bold font-[family-name:var(--font-header)]">
-                ieComfort
-              </span>
+            <div className="mb-5">
+              <Image
+                src="/images/logo.jpg"
+                alt="ieComfort"
+                width={160}
+                height={40}
+                className="h-10 w-auto brightness-0 invert"
+              />
             </div>
             <p className="text-sm text-gray-400 leading-relaxed">
               Innovative building solutions aligned with your mission. Delivering energy

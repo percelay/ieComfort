@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
@@ -21,13 +22,15 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link href="#home" className="flex items-center gap-2 shrink-0">
-            <div className="w-9 h-9 bg-accent rounded-xl flex items-center justify-center">
-              <span className="text-white font-bold text-sm font-[family-name:var(--font-header)]">ie</span>
-            </div>
-            <span className="text-xl font-bold text-text-main font-[family-name:var(--font-header)]">
-              ieComfort
-            </span>
+          <Link href="#home" className="shrink-0">
+            <Image
+              src="/images/logo.jpg"
+              alt="ieComfort"
+              width={160}
+              height={40}
+              className="h-9 md:h-10 w-auto"
+              priority
+            />
           </Link>
 
           {/* Desktop Links */}

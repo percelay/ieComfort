@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Shield, Zap } from "lucide-react";
 
 export default function Hero() {
@@ -61,48 +62,20 @@ export default function Hero() {
 
           {/* Right — Visual */}
           <div className="relative hidden md:block">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-blue-100 to-blue-50 aspect-[4/3]">
-              {/* Decorative HVAC/Building visual */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center p-8">
-                  <div className="w-24 h-24 mx-auto bg-accent/10 rounded-2xl flex items-center justify-center mb-6">
-                    <svg
-                      viewBox="0 0 80 80"
-                      fill="none"
-                      className="w-14 h-14 text-accent"
-                    >
-                      {/* Building icon */}
-                      <rect x="10" y="20" width="24" height="50" rx="2" fill="currentColor" opacity="0.2" />
-                      <rect x="46" y="10" width="24" height="60" rx="2" fill="currentColor" opacity="0.3" />
-                      <rect x="14" y="26" width="6" height="6" rx="1" fill="currentColor" opacity="0.6" />
-                      <rect x="24" y="26" width="6" height="6" rx="1" fill="currentColor" opacity="0.6" />
-                      <rect x="14" y="38" width="6" height="6" rx="1" fill="currentColor" opacity="0.6" />
-                      <rect x="24" y="38" width="6" height="6" rx="1" fill="currentColor" opacity="0.6" />
-                      <rect x="14" y="50" width="6" height="6" rx="1" fill="currentColor" opacity="0.6" />
-                      <rect x="24" y="50" width="6" height="6" rx="1" fill="currentColor" opacity="0.6" />
-                      <rect x="50" y="16" width="6" height="6" rx="1" fill="currentColor" opacity="0.6" />
-                      <rect x="60" y="16" width="6" height="6" rx="1" fill="currentColor" opacity="0.6" />
-                      <rect x="50" y="28" width="6" height="6" rx="1" fill="currentColor" opacity="0.6" />
-                      <rect x="60" y="28" width="6" height="6" rx="1" fill="currentColor" opacity="0.6" />
-                      <rect x="50" y="40" width="6" height="6" rx="1" fill="currentColor" opacity="0.6" />
-                      <rect x="60" y="40" width="6" height="6" rx="1" fill="currentColor" opacity="0.6" />
-                      <rect x="50" y="52" width="6" height="6" rx="1" fill="currentColor" opacity="0.6" />
-                      <rect x="60" y="52" width="6" height="6" rx="1" fill="currentColor" opacity="0.6" />
-                      {/* Leaf / Green energy accent */}
-                      <circle cx="40" cy="8" r="6" fill="#22c55e" opacity="0.5" />
-                    </svg>
-                  </div>
-                  <p className="text-lg font-semibold text-primary/70 font-[family-name:var(--font-header)]">
-                    Modern Facility Management
-                  </p>
-                  <p className="text-sm text-text-muted mt-1">
-                    HVAC &bull; Lighting &bull; Energy Optimization
-                  </p>
-                </div>
-              </div>
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3]">
+              <Image
+                src="/images/hero.jpeg"
+                alt="HVAC ductwork and industrial ventilation systems"
+                fill
+                className="object-cover"
+                priority
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+              {/* Subtle overlay for floating card contrast */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-black/10" />
 
               {/* Floating accent cards */}
-              <div className="absolute top-6 right-6 bg-white rounded-xl shadow-lg px-4 py-3 flex items-center gap-3">
+              <div className="absolute top-6 right-6 bg-white/95 backdrop-blur-sm rounded-xl shadow-lg px-4 py-3 flex items-center gap-3">
                 <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
                   <Zap size={20} className="text-green-600" />
                 </div>
@@ -112,7 +85,7 @@ export default function Hero() {
                 </div>
               </div>
 
-              <div className="absolute bottom-6 left-6 bg-white rounded-xl shadow-lg px-4 py-3 flex items-center gap-3">
+              <div className="absolute bottom-6 left-6 bg-white/95 backdrop-blur-sm rounded-xl shadow-lg px-4 py-3 flex items-center gap-3">
                 <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
                   <Shield size={20} className="text-accent" />
                 </div>
