@@ -28,9 +28,9 @@ export default function Footer() {
               <Image
                 src="/images/logo.jpg"
                 alt="ieComfort"
-                width={160}
-                height={40}
-                className="h-10 w-auto brightness-0 invert"
+                width={210}
+                height={38}
+                className="h-12 w-auto brightness-0 invert"
               />
             </div>
             <p className="text-sm text-gray-400 leading-relaxed">
